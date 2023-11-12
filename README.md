@@ -1,9 +1,8 @@
 # 🚀21 Savage Lyric Board w/ Authentication
 
-<img width="1436" alt="savage-login" src="https://github.com/JacinthaDev/savage-auth/assets/129231721/fea47de3-2c32-4f74-8b96-6bdaa5abf558">
+<img width="1436" alt="savage-login" src="https://github.com/JacinthaDev/savage-auth/assets/129231721/6060f906-a5d9-4424-89b7-3c115d28f798">
 
-<img width="1316" alt="savage-auth" src="https://github.com/JacinthaDev/savage-auth/assets/129231721/a194be21-caa5-419a-a848-9b74322b4db9">
-
+<img width="1316" alt="savage-auth" src="https://github.com/JacinthaDev/savage-auth/assets/129231721/e33fc7d3-94bb-4f05-a4f6-4b342c732ebb">
 
 # About this project
 This project is an advanced version of a previous repo called "savage-complete" that now includes authentication. Login to be taken to a message board to add 21 Savage lyrics.
