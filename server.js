@@ -16,12 +16,12 @@ const bodyParser   = require('body-parser');
 const session      = require('express-session');
 require('dotenv').config();
 
-const configDB = require('./config/database.js');
-
 let db
+let url= process.env.dbString
+let dbName = "personal-express"
 
 // configuration ===============================================================
-mongoose.connect(configDB.url, (err, database) => {
+mongoose.connect(url, (err, database) => {
   if (err) return console.log(err)
   db = database
   require('./app/routes.js')(app, passport, db);
