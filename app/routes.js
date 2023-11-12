@@ -10,10 +10,11 @@ module.exports = function(app, passport, db) {
     // PROFILE SECTION =========================
     app.get('/profile', isLoggedIn, function(req, res) {
         db.collection('messages').find().toArray((err, result) => {
+          let sortedResult= result.sort((a, b) => (b.thumbUp- b.thumbDown) - (a.thumbUp- a.thumbDown))
           if (err) return console.log(err)
           res.render('profile.ejs', {
             user : req.user,
-            messages: result
+            messages: sortedResult
           })
         })
     });
@@ -37,10 +38,11 @@ module.exports = function(app, passport, db) {
     })
 
     app.put('/messages', (req, res) => {
+      const upOrDown = req.body.hasOwnProperty('thumbDown') ? 'thumbDown' : 'thumbUp'
       db.collection('messages')
       .findOneAndUpdate({name: req.body.name, msg: req.body.msg}, {
-        $set: {
-          thumbUp:req.body.thumbUp + 1
+        $inc: {
+          [upOrDown] : 1
         }
       }, {
         sort: {_id: -1},
@@ -98,7 +100,7 @@ module.exports = function(app, passport, db) {
 
     // local -----------------------------------
     app.get('/unlink/local', isLoggedIn, function(req, res) {
-        var user            = req.user;
+        let user            = req.user;
         user.local.email    = undefined;
         user.local.password = undefined;
         user.save(function(err) {
