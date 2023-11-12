@@ -34,13 +34,13 @@ I worked with passport.js the first time and learned more about requiring authen
 ## Examples:
 Take a look at similar projects!
 
-Packing List:
+Library Catalog: https://github.com/JacinthaDev/personalfullstack2
 
-Library Catalog:
+Appointment Scheduler: https://github.com/JacinthaDev/personalfullstack1
 
-Appointment Scheduler:
+Packing List: https://github.com/JacinthaDev/personal-express
 
-#### Backend Technologies
+## Backend Technologies
 MongoDB Atlas: https://www.mongodb.com/atlas/database
 
 
